@@ -1,0 +1,61 @@
+Strategy First enter. Command=d
+Strategy First exit. Command=d
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x5 Code=0x48
+Strategy First IOCTL exit.
+Strategy First exit. Command=10
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x1 Code=0x73
+ioctlGetDCBInfo(0x360) result:
+Write timeout=6000
+Read timeout=6000
+CtlHndShake=0x59 FlowReplace=0x40 fbTimeout=0x2
+ErrorChar=0x0 BreakChar=0x0 XONChar=0x11 XOFFChar=0x13
+Strategy First IOCTL exit.
+Strategy First exit. Command=10
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x1 Code=0x43
+Strategy First IOCTL exit.
+Strategy First exit. Command=10
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x1 Code=0x63
+Strategy First IOCTL exit.
+Strategy First exit. Command=10
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x1 Code=0x42
+Strategy First IOCTL exit.
+Strategy First exit. Command=10
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x1 Code=0x53
+ioctlSetDCBInfo request:
+Write timeout=6000
+Read timeout=6000
+CtlHndShake=0x59 FlowReplace=0x40 fbTimeout=0x5
+ErrorChar=0x0 BreakChar=0x0 XONChar=0x11 XOFFChar=0x13
+ioctlSetDCBInfo(0x360) result:
+Write timeout=6000
+Read timeout=6000
+CtlHndShake=0x59 FlowReplace=0x40 fbTimeout=0x5
+ErrorChar=0x0 BreakChar=0x0 XONChar=0x11 XOFFChar=0x13
+Strategy First IOCTL exit.
+Strategy First exit. Command=10
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x1 Code=0x67
+Strategy First IOCTL exit.
+Strategy First exit. Command=10
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x1 Code=0x67
+Strategy First IOCTL exit.
+Strategy First exit. Command=10
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x1 Code=0x67
+Strategy First IOCTL exit.
+Strategy First exit. Command=10
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x1 Code=0x67
+Strategy First IOCTL exit.
+Strategy First exit. Command=10
+Strategy First enter. Command=10
+Strategy First IOCTL enter. Category=0x1 Code=0x72
+Strategy First IOCTL exit.
+Strategy First exit. Command=10

@@ -1,0 +1,140 @@
+WATCOM Linker Version 11.0c
+Copyright by Sybase, Inc., and its subsidiaries, 1985, 2002.
+Created on:       03/11/08 22:11:48
+Executable Image: com2com.sys
+creating an OS/2 16-bit dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0001:0000            000064f2
+CGROUP                          0002:0000            000010e2
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_HEADER                DATA           DGROUP         0001:0000       0000005a
+_DATA                  DATA           DGROUP         0001:005c       00000002
+CONST                  DATA           DGROUP         0001:0060       0000041d
+CONST2                 DATA           DGROUP         0001:0480       00000000
+XIB                    DATA           DGROUP         0001:0480       00000000
+XI                     DATA           DGROUP         0001:0480       00000006
+XIE                    DATA           DGROUP         0001:0486       00000000
+_BSS                   BSS            DGROUP         0001:0490       00006056
+_ENDDS                 ENDDS          DGROUP         0001:64e8       00000002
+_HEAP                  ENDDS          DGROUP         0001:64ec       00000000
+_ENDHEAP               ENDDS          DGROUP         0001:64ec       00000002
+_INITDATA              ENDDS          DGROUP         0001:64f0       00000000
+_ENDINITDATA           ENDDS          DGROUP         0001:64f0       00000002
+_TEXT                  CODE           CGROUP         0002:0000       00001092
+RMCODE                 CODE           CGROUP         0002:1094       00000000
+_ENDCS                 CODE           CGROUP         0002:1094       00000002
+_INITTEXT              CODE           CGROUP         0002:1098       0000004a
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: segments.obj(U:\src\trunk\com2com\segments.asm)
+0001:64e8*     _end_of_data
+0001:64ec      _end_of_heap
+0001:64f0*     _end_of_initdata
+0002:1094      _end_of_text
+Module: header.obj(U:\src\trunk\com2com\header.c)
+0001:0000*     _header
+Module: init.obj(U:\src\trunk\com2com\init.c)
+0002:1098      StrategyInitControl_
+0002:10c9      StrategyInitCom_
+Module: strategy_d.obj(U:\src\trunk\com2com\strategy_d.c)
+0002:0017      StrategyHandlerControl_
+0002:005d      StrategyHandlerComFirst_
+0002:00bd      StrategyHandlerComSecond_
+Module: base/devhelp.obj(U:\src\trunk\com2com\base\devhelp.c)
+0001:0490      _Device_Help
+Module: base/stdio.obj(U:\src\trunk\com2com\base\stdio.c)
+0002:03b9*     dev_sprintf_
+0002:03e8      dev_vsprintf_
+Module: base/stdlib.obj(U:\src\trunk\com2com\base\stdlib.c)
+0002:0414      _itoa_
+0002:0436      _utoa_
+0002:04b8      _ltoa_
+0002:04e9      _ultoa_
+Module: base/string.obj(U:\src\trunk\com2com\base\string.c)
+0002:059d      memcpy_
+0002:05ca      strlen_
+Module: resident.obj(U:\src\trunk\com2com\resident.cc)
+0002:05de*     logPrintRaw_
+0002:05ed*     logPrintString_
+0002:0605      logPrintf_
+0002:0644      ResidentInit_
+0002:066b      devLog_read_
+0002:06c7      devFirst_strategy_
+0002:0754      devSecond_strategy_
+Module: CircularBuffer.obj(U:\src\trunk\com2com\CircularBuffer.cc)
+0002:07e1      void near CircularBuffer::init()
+0002:07f2      int unsigned near CircularBuffer::read( long unsigned, int unsigned, long unsigned, bool far & )
+0002:090e      int unsigned near CircularBuffer::write( long unsigned, int unsigned )
+0002:0972      int unsigned near CircularBuffer::writeVirt( char unsigned far *, int unsigned )
+Module: ComDevice.obj(U:\src\trunk\com2com\ComDevice.cc)
+0002:0a77      void near ComDevice::init()
+0002:0aa3      void near ComDevice::setPeer( ComDevice near * )
+0002:0aac      void near ComDevice::strategyOpen( __2bd9g9REQPACKET far * )
+0002:0ac8      void near ComDevice::strategyClose( __2bd9g9REQPACKET far * )
+0002:0adb      void near ComDevice::strategyRead( __2bd9g9REQPACKET far * )
+0002:0b98      void near ComDevice::strategyWrite( __2bd9g9REQPACKET far * )
+0002:0c38      void near ComDevice::strategyIOCtl( __2bd9g9REQPACKET far * )
+0002:0cb3+     void near ComDevice::initDCBInfo( bool )
+0002:0cfa+     void near ComDevice::ioctlSetBaudRate( __2bd9g9REQPACKET far * )
+0002:0d5a+     void near ComDevice::ioctlExtSetBaudRate( __2bd9g9REQPACKET far * )
+0002:0dd1+     void near ComDevice::ioctlSetDCBInfo( __2bd9g9REQPACKET far * )
+0002:0e5f+     void near ComDevice::ioctlGetBaudRate( __2bd9g9REQPACKET far * )
+0002:0eb6+     void near ComDevice::ioctlExtGetBaudRate( __2bd9g9REQPACKET far * )
+0002:0f43+     void near ComDevice::ioctlGetDCBInfo( __2bd9g9REQPACKET far * )
+Module: wclib/i4d.obj(i4d)
+0002:0fac*     __I4D
+0002:0ff5      __U4D
+Module: wclib/i4m.obj(i4m)
+0002:107a*     __I4M
+0002:107a      __U4M
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0200 (512.)
+Memory size:  75d4 (30164.)
+Link time: 00:00.06
